@@ -7,7 +7,7 @@ username="postgres"
 password="root"
 database="postgres"
 
-conn = psycopg2.connect(dbname=database,user=username,password=password)
+#conn = psycopg2.connect(dbname=database,user=username,password=password)
 
 @app.route('/')
 def hello_world():
