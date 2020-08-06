@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colrolib Templates">
+    <meta name="author" content="Colrolib">
+    <meta name="keywords" content="Colrolib Templates">
+
+    <!-- Title Page-->
+    <title>E-Book</title>
+
+    <!-- Icons font CSS-->
+    <link href="{{ url_for('static',filename='vendor/mdi-font/css/material-design-iconic-font.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{ url_for('static',filename='vendor/font-awesome-4.7/css/font-awesome.min.css')}}" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+<!--    &lt;!&ndash; Vendor CSS&ndash;&gt;-->
+<!--    <link href="{{ url_for('static',filename='vendor/select2/select2.min.css')}}" rel="stylesheet" media="all">-->
+<!--    <link href="{{ url_for('static',filename='vendor/datepicker/daterangepicker.css')}}" rel="stylesheet" media="all">-->
+
+    <!-- Main CSS-->
+    <link href="{{ url_for('static',filename='css/main.css')}}" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-img-2 p-t-290 p-b-120">
+        <div class="wrapper wrapper--w1226">
+            <div class="card card-5">
+                <div class="card-body">
+                    <form method="GET" action="http://127.0.0.1:5000/filterBooks">
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Gutenberg ID</label>
+                                    <input class="input--style-1" type="text" name="gutenberg_id" placeholder="Specific Book ID" >
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Language</label>
+                                    <input class="input--style-1" type="text" name="langs" placeholder="en,fr" >
+                                </div>
+                            </div>
+                        </div>
+						<div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Mime-Type</label>
+                                    <input class="input--style-1" type="text" name="mime" placeholder="application/x-mobipocket-ebook,text/plain.." >
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Topic</label>
+                                    <input class="input--style-1" type="text" name="topics" placeholder="Any subject or Genre" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Author</label>
+                                    <input class="input--style-1" type="text" name="author" placeholder="Author names" >
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Title</label>
+                                    <input class="input--style-1" type="text" name="title" placeholder="Book Title" >
+                                </div>
+                            </div>
+                        </div>
+                        
+						
+                            </div>
+                            <div class="col-2">
+                                <div class="row row-space">
+                                    
+                                    <div class="col-2">
+                                        <button class="btn-submit" type="submit">search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/jquery-validate/jquery.validate.min.js"></script>
+    <script src="vendor/bootstrap-wizard/bootstrap.min.js"></script>
+    <script src="vendor/bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->
