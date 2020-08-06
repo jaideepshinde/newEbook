@@ -3,10 +3,10 @@ from flask import Flask,request,jsonify,render_template,url_for
 app = Flask(__name__)
 import psycopg2
 import os
-hostame=os.environ.get("DATABASE_URL")
-username="postgres"
-password="root"
-database="postgres"
+hostame="ec2-54-211-210-149.compute-1.amazonaws.com"
+username="asoknnbmofmyeg"
+password="d143a33e1b0561a1acfce811161e5216ce2cf33b3a6fbd07f43b19e33f1ffd2d"
+database="dj6iu7914th7h"
 
 conn = psycopg2.connect(dbname=database,user=username,password=password,hostame=hostame)
 
