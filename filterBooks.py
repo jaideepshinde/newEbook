@@ -3,12 +3,15 @@ from flask import Flask,request,jsonify,render_template,url_for
 app = Flask(__name__)
 import psycopg2
 
-hostame="ec2-54-211-210-149.compute-1.amazonaws.com"
-username="lsubjogtkaacze"
-password="cd58ddcfb5a7ad245fabc4530cf10779e45b769794248a0c32b2d9ede2d9c091"
-database="d9i62jfeqhrt1v"
+import urllib.parse # for python 3+ use: from urllib.parse import urlparse
+result = urllib.parse.urlparse("postgres://lsubjogtkaacze:cd58ddcfb5a7ad245fabc4530cf10779e45b769794248a0c32b2d9ede2d9c091@ec2-54-243-67-199.compute-1.amazonaws.com:5432/d9i62jfeqhrt1v")
+# also in python 3+ use: urlparse("YourUrl") not urlparse.urlparse("YourUrl")
+username = result.username
+password = result.password
+database = result.path[1:]
+hostname = result.hostname
 
-conn = psycopg2.connect(dbname=database,user=username,password=password,host=hostame)
+conn = psycopg2.connect(dbname=database,user=username,password=password,host=hostname)
 
 @app.route('/')
 def hello_world():
