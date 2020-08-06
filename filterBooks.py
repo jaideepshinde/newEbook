@@ -2,11 +2,11 @@
 from flask import Flask,request,jsonify,render_template,url_for
 app = Flask(__name__)
 import psycopg2
-import os
+
 hostame="ec2-54-211-210-149.compute-1.amazonaws.com"
-username="asoknnbmofmyeg"
-password="d143a33e1b0561a1acfce811161e5216ce2cf33b3a6fbd07f43b19e33f1ffd2d"
-database="dj6iu7914th7h"
+username="lsubjogtkaacze"
+password="cd58ddcfb5a7ad245fabc4530cf10779e45b769794248a0c32b2d9ede2d9c091"
+database="d9i62jfeqhrt1v"
 
 conn = psycopg2.connect(dbname=database,user=username,password=password,hostame=hostame)
 
