@@ -8,7 +8,7 @@ username="lsubjogtkaacze"
 password="cd58ddcfb5a7ad245fabc4530cf10779e45b769794248a0c32b2d9ede2d9c091"
 database="d9i62jfeqhrt1v"
 
-conn = psycopg2.connect(dbname=database,user=username,password=password,hostame=hostame)
+conn = psycopg2.connect(dbname=database,user=username,password=password,host=hostame)
 
 @app.route('/')
 def hello_world():
