@@ -2,12 +2,13 @@
 from flask import Flask,request,jsonify,render_template,url_for
 app = Flask(__name__)
 import psycopg2
-
+import os
+hostame=os.environ.get("DATABASE_URL")
 username="postgres"
 password="root"
 database="postgres"
 
-#conn = psycopg2.connect(dbname=database,user=username,password=password)
+conn = psycopg2.connect(dbname=database,user=username,password=password,hostame=hostame)
 
 @app.route('/')
 def hello_world():
