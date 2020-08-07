@@ -113,7 +113,7 @@ def filterbooks():
             ids[r[0]]={r[-3]:t}
             resultFinal.append(list(r[1:]))
             t+=1
-    return jsonify(resultFinal[:])
+    return jsonify({"Total Count":len(resultFinal[:]),"Books":resultFinal[:]})
 
 
 if __name__ == '__main__':
