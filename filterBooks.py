@@ -43,7 +43,7 @@ def getTopicsquery(topic):
 
 
 
-@app.route('/filterBooks',methods=['GET','POST'])
+@app.route('/filterBooks/',methods=['GET','POST'])
 def filterbooks():
     id=request.args['gutenberg_id']
     lang=request.args['langs']
