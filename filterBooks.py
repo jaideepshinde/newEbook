@@ -107,7 +107,7 @@ def filterbooks():
                 resultFinal[id][-1]+=r[-1]
             else:
                 ids[r[0]][r[-3]]=t
-                resultFinal.append(list(r[1]))
+                resultFinal.append(list(r[1:]))
                 t+=1
         else:
             ids[r[0]]={r[-3]:t}
